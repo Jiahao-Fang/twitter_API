@@ -86,11 +86,11 @@ class twitter_scrape(object):
             t_list.append(t)
             t.start()
 
-
-Keyword = 'crypto'
-startdate='2022-08-01'
-enddate='2022-10-01'
-maximum_threads=100
-total_tweets=1000
-spi = twitter_scrape(Keyword,maximum_threads,total_tweets,startdate,enddate)
-spi.start()
+if __name__ == '__main__':
+    Keyword = 'crypto'
+    startdate='2022-08-01'
+    enddate='2022-10-01'
+    maximum_threads=100
+    total_tweets=1000
+    spi = twitter_scrape(Keyword,maximum_threads,total_tweets,startdate,enddate)
+    spi.start()
