@@ -12,7 +12,7 @@ The project requires Python 3.8 or higher
 
 ## Usage
 
-`__snscrape` is for data scraping by multi-threads using snscraper pacakage, user can change the parameter including `Keyword`, `startdate`, `enddate`, `maximum_threads` and `total_tweets`.
+`__snscrape` is for data scraping by multi-threads using snscraper pacakage, user can change the parameter including `Keyword`, `startdate`, `enddate`, `maximum_threads` and `total_tweets`. It will store the tweets data into a csv file including its contents, post user, likecounts. User can also request more information of tweets by changing the parameter.
 
 `tweepy_setup` is authentication class for Twitter API, the key in it now is my own developer account with V2 elevated access.
 
