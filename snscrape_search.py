@@ -65,6 +65,7 @@ class twitter_scrape(object):
             tmp=tmp.replace(',',' ')
             f.write(f"{tweet.date},{tweet.user},{tmp},{tweet.likeCount}\n")
         f.close()
+        return 
 
     def start(self):
         '''
@@ -81,10 +82,12 @@ class twitter_scrape(object):
         self.mean_tweets=self.total_tweets//len(self.queries)
         t_list = []
         for query in self.queries:
-            print(len(t_list))
             t = Thread(target=self._spider,args=(query,))
             t_list.append(t)
             t.start()
+        for t in t_list:
+            t.join()
+        return
 
 if __name__ == '__main__':
     Keyword = 'crypto'
