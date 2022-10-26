@@ -22,3 +22,6 @@ The project requires Python 3.8 or higher
 
 More function is coming soon
 
+## 10.25 Update
+After looking into the source code of snscrape, I realized snscrape package scrape the tweets by accessing the url:https://api.twitter.com/2/search/adaptive.json, which is a unsupported and unpublished API from Twitter's developer platform. It has potential risk of using this API including a block of IP address. Please use it carefully.
+
