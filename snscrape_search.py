@@ -90,10 +90,10 @@ class twitter_scrape(object):
         return
 
 if __name__ == '__main__':
-    Keyword = 'crypto'
-    startdate='2022-08-01'
-    enddate='2022-10-01'
+    Keyword = 'ethereum'
+    startdate='2022-09-01'
+    enddate='2022-11-15'
     maximum_threads=100
-    total_tweets=1000
+    total_tweets=3000000
     spi = twitter_scrape(Keyword,maximum_threads,total_tweets,startdate,enddate)
     spi.start()
